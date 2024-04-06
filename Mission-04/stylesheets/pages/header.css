@@ -1,0 +1,385 @@
+/* 헤더 */
+ul {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+}
+ul li {
+  list-style: none;
+}
+.container {
+  width: 100vw;
+  height: 150px;
+  /* background-color: tomato; */
+}
+.sub {
+  width: 100%;
+  height: 34px;
+  background-color: var(--color-gray-100);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.linkArea {
+  width: 1020px;
+  height: 24px;
+  /* background-color: gold; */
+  font-size: 12px;
+}
+.linkArea ul {
+  height: 100%;
+}
+.linkArea ul li:nth-child(4),
+.linkArea ul li:nth-child(5) {
+  order: -1;
+  margin: 0 8px;
+}
+.linkArea ul li:nth-child(5) {
+  margin-right: 736px;
+}
+.linkArea ul li:first-child,
+.linkArea ul li:nth-child(2),
+.linkArea ul li:nth-child(3) {
+  order: 1;
+}
+.linkArea ul li:first-child,
+.linkArea ul li:nth-child(2) {
+  margin-right: 8px;
+}
+.main {
+  width: 1100px;
+  height: 116px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 130px 200px 555px 92px 50px;
+  grid-template-rows: 60px 56px;
+  grid-template-areas:
+    " category logo form mycoupang cart "
+    " category nav nav mycoupang cart ";
+
+  justify-content: center;
+  justify-items: center;
+}
+.button--category {
+  width: 110px;
+  height: 116px;
+  background-color: var(--color-blue-600);
+  color: white;
+  font-size: 12px;
+  border: none;
+  background-image: url("../../assets/icon/hamburger.svg");
+  background-position: top 30px center;
+  background-repeat: no-repeat;
+  position: relative;
+
+  grid-area: category;
+}
+.button--category span {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+/* h1 > a:first-child {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+} */
+h1 a {
+  /* margin: 0; */
+  display: block;
+  width: 176px;
+  height: 40px;
+
+  grid-area: logo;
+  align-self: self-start;
+
+  background-image: url("../../assets/logo/logo.svg");
+  background-position: center center;
+  background-size: cover;
+}
+h1 span {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+form {
+  width: 516px;
+  height: 40px;
+  border: 2px solid var(--color-blue-600);
+  display: flex;
+  position: relative;
+
+  grid-area: form;
+  align-self: self-end;
+}
+select {
+  width: 135px;
+  height: 100%;
+  border: none;
+  border-right: 1px solid var(--color-gray-100);
+  appearance: none;
+  outline: none;
+  padding-left: 12px;
+  font-size: 12px;
+  color: var(--color-gray-700);
+}
+form svg {
+  position: absolute;
+  left: 110px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  pointer-events: none;
+  width: 10px;
+  height: 10px;
+}
+form input {
+  flex-grow: 1;
+  border: none;
+  padding: 10px;
+  outline: none;
+}
+form input::placeholder {
+  font-size: 12px;
+  color: var(--color-gray-600);
+}
+form button {
+  border: none;
+  background-color: white;
+}
+.micBtn {
+  background-image: url("../../assets/icon/mic.svg");
+  background-position: center center;
+  background-size: cover;
+  width: 30px;
+  height: 70%;
+  margin: auto 0;
+  /* background-color: tomato; */
+}
+.searchBtn {
+  background-image: url("../../assets/icon/search.svg");
+  background-position: center center;
+  background-size: cover;
+  width: 30px;
+  height: 70%;
+  margin: auto 0 auto 3px;
+  /* margin-left: 5px; */
+  /* background-color: tomato; */
+}
+/* ================================================= */
+/* ================================================= */
+/* ================================================= */
+/* ================nav flex========================= */
+
+/* .navContainer {
+  width: 755px;
+  height: 26px;
+
+  grid-area: nav;
+  align-self: center;
+}
+.navContainer ul {
+  width: 100%;
+  height: 100%;
+  background-color: violet;
+  font-size: 12px;
+  justify-content: center;
+}
+.navContainer ul li{
+  width: 100px;
+  display: inline-block;
+}
+.navContainer ul li div a {
+  display: flex;
+  align-content: center;
+}
+.navContainer ul li img {
+  margin-right: 4px;
+}
+.navContainer ul li:nth-child(3) img {
+  margin: 0 0 0 4px;
+} */
+/* ================================================= */
+/* ================================================= */
+/* ================================================= */
+
+/* ================================================= */
+/* ================================================= */
+/* ================================================= */
+.navContainer {
+  width: 755px;
+  height: 26px;
+
+  grid-area: nav;
+  align-self: last baseline;
+  /* background-color: pink; */
+  font-size: 12px;
+}
+.navContainer ul {
+  display: block;
+}
+.navContainer ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+.navContainer ul li:first-child {
+  margin-left: 30px;
+}
+.navContainer ul li:nth-child(1) img,
+.navContainer ul li:nth-child(2) img {
+  margin-right: 4px;
+}
+.navContainer ul li:nth-child(3) img {
+  margin: 0 0 0 4px;
+}
+
+/* ================================================= */
+/* ================================================= */
+/* ================================================= */
+.myCoupang {
+  grid-area: mycoupang;
+  height: 50%;
+  align-self: center;
+}
+.cart {
+  grid-area: cart;
+  height: 50%;
+  position: relative;
+  align-self: center;
+}
+.myCoupang ul {
+  /* display: block; */
+  display: none;
+}
+.myCoupang button,
+.cart button {
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: top 30% center;
+  position: relative;
+  background-color: white;
+  border: none;
+  font-size: 12px;
+  /* background-color: tomato; */
+  margin-bottom: 15px;
+}
+.myCoupang button {
+  width: 90px;
+  background-image: url("../../assets/icon/my-coupang.svg");
+}
+.cart button {
+  width: 50px;
+  background-image: url("../../assets/icon/cart.svg");
+  position: relative;
+}
+.myCoupang button span,
+.cart button span:first-child {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.is--active ul {
+  display: block;
+  border: 1px solid var(--color-gray-300);
+  font-size: 12px;
+  line-height: 2rem;
+  padding: 10px;
+  position: relative;
+  z-index: 100;
+}
+.is--active ul::after {
+  border-color: white transparent;
+  border-style: solid;
+  border-width: 0 6px 8px 6.5px;
+  content: "";
+  display: block;
+  left: 45%;
+  position: absolute;
+  top: -7px;
+  width: 0;
+  z-index: 1;
+}
+
+.is--active ul::before {
+  border-color: var(--color-gray-300) transparent;
+  border-style: solid;
+  border-width: 0 6px 8px 6.5px;
+  content: "";
+  display: block;
+  left: 45%;
+  position: absolute;
+  top: -8px;
+  width: 0;
+  z-index: 0;
+}
+.cart > div {
+  display: none;
+  width: 200px;
+  height: 100px;
+  border: 1px solid var(--color-gray-300);
+  font-size: 12px;
+  line-height: 2rem;
+  padding: 10px;
+  position: absolute;
+  bottom: -120px;
+  left: -150px;
+}
+.cart--empty > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cart > div::after {
+  border-color: white transparent;
+  border-style: solid;
+  border-width: 0 6px 8px 6.5px;
+  content: "";
+  display: block;
+  left: 85%;
+  position: absolute;
+  top: -7px;
+  width: 0;
+  z-index: 1;
+}
+.cart > div::before {
+  border-color: var(--color-gray-300) transparent;
+  border-style: solid;
+  border-width: 0 6px 8px 6.5px;
+  content: "";
+  display: block;
+  left: 85%;
+  position: absolute;
+  top: -8px;
+  width: 0;
+  z-index: 0;
+}
+.cart button span:last-child {
+  margin: 0;
+  padding: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--color-blue-600);
+  color: white;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
